@@ -1,8 +1,20 @@
-# Attention at absolute zero
+# Attention at Absolute Zero
 
-Code, trained models and the demo page for the paper *Attention at absolute zero*
-([arXiv:2611.11937](https://arxiv.org/abs/2611.11937)). The demo runs in the browser at
-[neovand.github.io/cold-attention](https://neovand.github.io/cold-attention).
+<p align="center">
+  <a href="https://neovand.github.io/cold-attention">
+    <img src="cold-attention.gif" alt="The demo page: a trained cold block sorting 64 numbers in the browser, loop by loop, with its pair state on the right" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2611.11937">Paper (arXiv:2611.11937)</a> ·
+  <a href="https://neovand.github.io/cold-attention">Demo in the browser</a> ·
+  <a href="https://huggingface.co/mohsenvand">Trained models</a>
+</p>
+
+Code, trained models and the demo page for the paper *Attention at Absolute Zero*
+([arXiv:2611.11937](https://arxiv.org/abs/2611.11937), version 2). The demo runs every CLRS-30 task in your browser
+with the trained blocks, at [neovand.github.io/cold-attention](https://neovand.github.io/cold-attention).
 
 Attention scores the candidates that could support an answer, which we call witnesses, and reads those scores at a
 temperature. The layer here keeps its state on pairs of items: for a pair (a, b), every third item k is a candidate
@@ -12,7 +24,7 @@ rebuilding its pair state from the input and these bits at every loop, and it is
 
 ## Results
 
-| | |
+| Task | Result |
 |---|---|
 | CLRS-30 (30 algorithms, trained without hints on at most 16 items, tested at 64), one **general block** shared by all 30 tasks | **97.20%** over three seeds (97.34, 97.26, 97.01) |
 | one general block per task | 97.04% (three seeds) |
@@ -46,9 +58,14 @@ says how.
 | [cold-attention-csp](https://huggingface.co/mohsenvand/cold-attention-csp) | 2-SAT and two-colouring, with the evaluation instances |
 | [cold-attention-organ](https://huggingface.co/mohsenvand/cold-attention-organ) | the block beside a frozen Qwen2.5 (kinship, comparison), its controls and its certificates |
 | [cold-attention-clutrr](https://huggingface.co/mohsenvand/cold-attention-clutrr) | CLUTRR, from graphs and from text |
-| [witness-clrs](https://huggingface.co/mohsenvand/witness-clrs) | the models of the paper's first version |
+| [witness-clrs](https://huggingface.co/mohsenvand/witness-clrs) | an earlier release of the per-task CLRS-30 models, superseded by cold-attention-clrs30 |
+
+The code and results of the paper's first version ("Attention Is Only as Good as Its Witnesses") are at
+[github.com/NeoVand/witnesses](https://github.com/NeoVand/witnesses).
 
 ## Layout
+
+The Python package keeps its working name, `witness_clrs`, which the Hugging Face cards' examples use.
 
 ```
 witness_clrs/      the package: the block in every variant (model.py), inputs (data.py), the library's data
@@ -158,6 +175,20 @@ The paper's figures are built from the released results. Their plotting scripts 
 trained block (per task, or the shared general block) running in the page, its loops, and the witnesses of any pair you
 click. See [site/README.md](site/README.md). The page's engine gives the same answers as this package on the official
 instances.
+
+## Citation
+
+```bibtex
+@misc{mohsenvand2026absolutezero,
+  title         = {Attention at Absolute Zero},
+  author        = {Mohsenvand, Mostafa},
+  year          = {2026},
+  eprint        = {2611.11937},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2611.11937}
+}
+```
 
 ## License
 

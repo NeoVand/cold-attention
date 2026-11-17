@@ -1,0 +1,11 @@
+{
+ "about": "Forecasts registered before the runs, and how they scored.",
+ "values": {
+  "forecasts.hit": "110",
+  "forecasts.miss": "75",
+  "forecasts.n": "213",
+  "forecasts.pending": "0",
+  "forecasts.runs": "18",
+  "forecasts.unscored": "28"
+ }
+}

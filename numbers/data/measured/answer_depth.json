@@ -1,0 +1,24 @@
+{
+ "about": "Answer depths, in hops, in the test files and the deeper and chain graphs.",
+ "values": {
+  "depth.bf.chain64.hi": "40",
+  "depth.bf.chain64.lo": "11",
+  "depth.bf.chain64.unreached": "49",
+  "depth.bf.deep128.hi": "127",
+  "depth.bf.deep128.lo": "32",
+  "depth.bf.deep256.hi": "244",
+  "depth.bf.deep256.lo": "59",
+  "depth.bf.test.hi": "7",
+  "depth.bf.test.lo": "4",
+  "depth.loops.64": "13",
+  "depth.prim.chain64.hi": "41",
+  "depth.prim.chain64.lo": "12",
+  "depth.prim.chain64.unreached": "47",
+  "depth.prim.deep128.hi": "124",
+  "depth.prim.deep128.lo": "40",
+  "depth.prim.deep256.hi": "255",
+  "depth.prim.deep256.lo": "123",
+  "depth.prim.test.hi": "24",
+  "depth.prim.test.lo": "10"
+ }
+}

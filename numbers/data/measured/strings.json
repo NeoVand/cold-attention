@@ -1,0 +1,29 @@
+{
+ "about": "The string matchers: the cold block with positions compared, texts over 2 to 4 letters, the stored-count program without open tests, and the theory column with the cold string rows.",
+ "values": {
+  "str.abc.kmp-matcher": "98.14",
+  "str.abc.kmp-matcher.hi": "98.88",
+  "str.abc.kmp-matcher.lo": "96.68",
+  "str.abc.kmp-matcher.s0": "98.88",
+  "str.abc.kmp-matcher.s1": "96.68",
+  "str.abc.kmp-matcher.s2": "98.88",
+  "str.abc.mean6": "92.83",
+  "str.abc.naive-string-matcher": "87.52",
+  "str.abc.naive-string-matcher.hi": "99.76",
+  "str.abc.naive-string-matcher.lo": "69.24",
+  "str.abc.naive-string-matcher.s0": "93.55",
+  "str.abc.naive-string-matcher.s1": "69.24",
+  "str.abc.naive-string-matcher.s2": "99.76",
+  "str.cold.kmp-matcher": "94.51",
+  "str.cold.kmp-matcher.lo": "89.94",
+  "str.cold.naive-string-matcher": "96.08",
+  "str.cold.naive-string-matcher.lo": "93.16",
+  "str.count.recipe.exact": "5",
+  "str.count.recipe.kmp-matcher": "100.00",
+  "str.count.recipe.kmp-matcher.lo": "100.00",
+  "str.count.recipe.naive-string-matcher": "95.28",
+  "str.count.recipe.naive-string-matcher.lo": "85.84",
+  "str.count.recipe.runs": "6",
+  "theory.strcold.mean": "98.18"
+ }
+}

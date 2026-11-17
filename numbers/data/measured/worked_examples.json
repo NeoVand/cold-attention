@@ -1,0 +1,17 @@
+{
+ "about": "The first figure's worked examples: the small map's route sums through each middle town at temperature 2, and the SET deal's pair scores.",
+ "values": {
+  "big.T": "2",
+  "big.best": "6",
+  "big.deal.beta": "2.68",
+  "big.deal.pairs": "28",
+  "big.deal.sets": "4",
+  "big.deal.sets.w": "four",
+  "big.deal.share": "0.9997",
+  "big.middle": "47",
+  "big.ties": "5",
+  "big.towns": "49",
+  "big.walk.T": "0.83",
+  "big.warm.mean": "7.4"
+ }
+}

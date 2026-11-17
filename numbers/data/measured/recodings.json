@@ -1,0 +1,28 @@
+{
+ "about": "Reads with the inputs' numbers recoded by an increasing function (orbit reads): how many answers change, for the cold blocks and the general block.",
+ "values": {
+  "orbit.cold.answers": "5,266,944",
+  "orbit.cold.changed": "0",
+  "orbit.cold.models": "35",
+  "orbit.cold.reads": "204",
+  "orbit.coldall.answers": "5,303,808",
+  "orbit.coldall.changed": "0",
+  "orbit.coldall.models": "41",
+  "orbit.coldall.reads": "222",
+  "orbit.gen.bf.far": "636",
+  "orbit.gen.bf.far.pct": "31",
+  "orbit.gen.bf.p05": "31",
+  "orbit.gen.bf.total": "2,048",
+  "orbit.gen.dij.far": "627",
+  "orbit.gen.ins.cube": "82",
+  "orbit.gen.kru.p10": "922",
+  "orbit.gen.kru.total": "131,072",
+  "orbit.gen.min.cube": "151",
+  "orbit.gen.min.total": "512",
+  "orbit.gen.prim.p10": "927",
+  "orbit.positions-compared.answers": "36,864",
+  "orbit.positions-compared.changed": "0",
+  "orbit.positions-compared.models": "6",
+  "orbit.positions-compared.reads": "18"
+ }
+}

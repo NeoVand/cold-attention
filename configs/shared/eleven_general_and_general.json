@@ -1,0 +1,90 @@
+{
+ "name": "eleven-tasks-general-and-general",
+ "tasks": [
+  "dfs",
+  "strongly_connected_components",
+  "topological_sort",
+  "mst_prim",
+  "bellman_ford",
+  "dag_shortest_paths",
+  "mst_kruskal",
+  "task_scheduling",
+  "lcs_length",
+  "optimal_bst",
+  "quickselect"
+ ],
+ "model": {
+  "block": "census",
+  "width": 128,
+  "mlp": 312,
+  "edge_mlp": 32
+ },
+ "second": {
+  "kind": "warm",
+  "width": 128,
+  "mlp": 312
+ },
+ "task_model": {
+  "bellman_ford": {
+   "weight_scale": "graph"
+  },
+  "dag_shortest_paths": {
+   "weight_scale": "graph"
+  },
+  "mst_prim": {
+   "weight_scale": "graph"
+  },
+  "mst_kruskal": {
+   "weight_scale": "graph"
+  }
+ },
+ "task_data": {
+  "topological_sort": "deep",
+  "strongly_connected_components": "multi_entry",
+  "bellman_ford": "deep",
+  "mst_prim": "deep"
+ },
+ "train": {
+  "updates": 30000,
+  "batch": 32,
+  "lr": 0.001,
+  "warmup": 2000,
+  "final_lr_frac": 0.01,
+  "weight_decay": 0.01,
+  "sizes": [
+   4,
+   7,
+   11,
+   13,
+   16
+  ],
+  "loop_rule": {
+   "c": 3,
+   "extra": 3
+  },
+  "big_pool": {
+   "sizes": [
+    24,
+    28,
+    32
+   ],
+   "share": 0.25,
+   "tasks": [
+    "bellman_ford",
+    "mst_prim",
+    "strongly_connected_components",
+    "topological_sort"
+   ],
+   "dir": "deep"
+  },
+  "weight_averaging": {
+   "from": 0.5,
+   "every": 1000
+  },
+  "remat": true,
+  "check_every": 500,
+  "eval_loops": 16,
+  "eval_batch": 16,
+  "eval_nodes": 1024
+ }
+}

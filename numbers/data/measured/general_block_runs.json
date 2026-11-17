@@ -1,0 +1,10 @@
+{
+ "about": "The one-task general block's runs: the fresh 64-item file, training updates and minutes, the parameter count of a weighted-graph model, the best block per task.",
+ "values": {
+  "best.mean": "98.48",
+  "gen.fresh.mean": "96.91",
+  "gen.minutes.median": "64",
+  "gen.steps": "80,000",
+  "params.gen.bf": "186,360"
+ }
+}

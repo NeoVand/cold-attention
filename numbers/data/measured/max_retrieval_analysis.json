@@ -1,0 +1,12 @@
+{
+ "about": "Max Retrieval: class offsets in the learned key score of twenty softmax models, the offset-only model of the cold read, and the soft count's offsets.",
+ "values": {
+  "maxret.offset.err4096": "0.5",
+  "maxret.offset.hi": "6.0",
+  "maxret.offset.lo": "1.9",
+  "maxret.offset.models": "20",
+  "maxret.offset.r4096": "0.99",
+  "maxret.s.offset.hi": "2.7",
+  "maxret.s.offset.lo": "1.2"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "about": "Quickselect: the runs asked for the answer by loop two, validated one size up, and read between the training sizes.",
+ "values": {
+  "qs.early.exact": "3",
+  "qs.early.n": "6",
+  "qs.early.s0": "7.81",
+  "qs.early.s1": "100.00",
+  "qs.early.s2": "100.00",
+  "qs.early.s3": "100.00",
+  "qs.early.s4": "99.95",
+  "qs.early.s5": "99.22",
+  "qs.inrange.loop2": "128",
+  "qs.inrange.of": "128",
+  "qs.inrange.rest": "0",
+  "qs.sizeup.exact": "1",
+  "qs.sizeup.n": "5"
+ }
+}

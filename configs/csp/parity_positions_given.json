@@ -1,0 +1,49 @@
+{
+ "task": "parity",
+ "model": {
+  "block": "cold",
+  "width": 128,
+  "mlp": 312,
+  "edge_mlp": 32,
+  "read": {
+   "rule": "log2",
+   "plus": 7
+  }
+ },
+ "train": {
+  "steps": 30000,
+  "batch": 8,
+  "lr": 0.001,
+  "warmup": 2000,
+  "final_lr_frac": 0.01,
+  "weight_decay": 0.01,
+  "loop_rule": {
+   "c": 3,
+   "extra": 3
+  },
+  "sizes": [
+   4,
+   6
+  ],
+  "big_pool": {
+   "sizes": [
+    8
+   ],
+   "share": 0.3333333333333333
+  },
+  "weight_averaging": {
+   "from": 0.5,
+   "every": 1000
+  },
+  "check_every": 500,
+  "eval_batch": 16,
+  "eval_nodes": 1024,
+  "extra_splits": [
+   "n8",
+   "n12",
+   "cube",
+   "petersen",
+   "fit"
+  ]
+ }
+}

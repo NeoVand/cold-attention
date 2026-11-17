@@ -1,0 +1,25 @@
+{
+ "about": "Strong components: fresh-file reads, graphs with five or more entry points, 96 and 128 nodes, the committee's cost.",
+ "values": {
+  "committee.scc.ep5": "88.5",
+  "committee.scc.hand.n128": "87.4",
+  "committee.scc.hand.n96": "95.0",
+  "committee.scc.n128": "80.0",
+  "committee.scc.n96": "89.0",
+  "reg.strongly-connected-components.fresh.hi": "86.54",
+  "reg.strongly-connected-components.fresh.lo": "85.05",
+  "reg.topological-sort.fresh.hi": "100.00",
+  "reg.topological-sort.fresh.lo": "99.99",
+  "scc.components": "640",
+  "scc.doors.cost": "30.14",
+  "scc.doors.fresh": "97.84",
+  "scc.doors.fresh.hi": "98.51",
+  "scc.doors.fresh.lo": "97.20",
+  "scc.ep5.general": "65",
+  "scc.ep5.hand": "92",
+  "scc.ep5.own": "88",
+  "scc.ep5.standard": "56",
+  "scc.ep5.warm": "69",
+  "scc.n.mean": "86.36"
+ }
+}

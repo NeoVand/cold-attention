@@ -1,0 +1,25 @@
+{
+ "about": "A frontier language model on CLRS-30 instances at 16 and 64 items.",
+ "values": {
+  "frontier.exact": "127",
+  "frontier.exact16": "64",
+  "frontier.exact64": "63",
+  "frontier.in64.hi": "65,590",
+  "frontier.n": "128",
+  "frontier.n16": "64",
+  "frontier.n64": "64",
+  "frontier.sec64": "65",
+  "frontier.sec64.hi": "200",
+  "frontier.sec64.lo": "16",
+  "frontier.secg64": "86",
+  "frontier.tasks": "8",
+  "frontier.tok64.hi": "23,575",
+  "frontier.tok64.lo": "50",
+  "frontier.tokg64.hi": "23,575",
+  "frontier.tokg64.lo": "3,759",
+  "frontier.usd64.hi": "0.70",
+  "frontier.usd64.lo": "0.01",
+  "frontier.usdg64.hi": "0.70",
+  "frontier.usdg64.lo": "0.25"
+ }
+}

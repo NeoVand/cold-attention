@@ -1,0 +1,11 @@
+{
+ "about": "2-SAT: contradiction depths at 500 variables, and the first loop at which every instance is right.",
+ "values": {
+  "csp.2sat.depth.hi": "511",
+  "csp.2sat.depth.lo": "256",
+  "csp.2sat.first.n256": "9–10",
+  "csp.2sat.first.n500": "10–12",
+  "csp.2sat.first.test": "8",
+  "csp.2sat.first.val": "6"
+ }
+}

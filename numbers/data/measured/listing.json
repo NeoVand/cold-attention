@@ -1,0 +1,13 @@
+{
+ "about": "Listing number programs for optimal BST: every program of a small grammar of joins, run to rest.",
+ "values": {
+  "list.obst.fit1": "6",
+  "list.obst.fit2": "12",
+  "list.obst.n1": "219,672",
+  "list.obst.n2": "1,357,824",
+  "list.obst.sec1": "3",
+  "list.obst.sec2": "18",
+  "list.obst.test": "66,560",
+  "list.obst.train": "200"
+ }
+}

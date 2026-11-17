@@ -1,0 +1,11 @@
+{
+ "about": "Kinship: the frozen models' reading of single sentences, and the wordings.",
+ "values": {
+  "kinship.read.of": "24,192",
+  "kinship.read.pct": "99.99",
+  "kinship.read.right": "24,190",
+  "kinship.read1p5.hardest": "57.0",
+  "kinship.unseen": "two",
+  "kinship.wordings": "eight"
+ }
+}

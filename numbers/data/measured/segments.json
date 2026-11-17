@@ -1,0 +1,10 @@
+{
+ "about": "Segment intersection: the general block trained four times longer; the product pair number with the form given.",
+ "values": {
+  "seg.long.mean": "99.64",
+  "seg.product.cross.hi": "66.45",
+  "seg.product.cross.mean": "44.30",
+  "seg.product.cross.zero": "1",
+  "seg.product.max": "66.45"
+ }
+}

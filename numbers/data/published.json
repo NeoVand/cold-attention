@@ -1,0 +1,642 @@
+{
+ "_sources": {
+  "floydnet": "FloydNet, arXiv 2601.19094: Table 9 (full: best of runs with and without hints), Table 10 (runs without hints), Table 12 (parameters by depth, CLRS)",
+  "best_other": "the best score any other published model reports on the task, with the model's name",
+  "no_hint_baselines": {
+   "bevilacqua2023": "Bevilacqua et al. ICML 2023, Table 3, Triplet-GMPNN No Hints (64-node test)",
+   "rodionov2023": "Rodionov & Prokhorenkova NeurIPS 2023, Table 2: [no hint (ours), add contrastive (ours)]",
+   "mahdavi2023": "Mahdavi et al. TMLR 2023, Table 8, no hints: [MPNN-FC, PGN, GAT]",
+   "georgiev2024": "Georgiev et al. NeurIPS 2024 (DEAR), Table 1 own test sets n=64: [NAR PGN, NAR Triplet-MPNN, NAR LT, DEAR, DEAR+CGP]; Table 4 DEAR Triplet (dear_triplet); Table 5 parallel search (dear_parallel)",
+   "dnar2025": "Rodionov & Prokhorenkova ICML 2025 (DNAR), BFS without hints"
+  },
+  "max_retrieval": "softmax_table1: Velickovic et al. 2025, Table 1 (softmax, ten seeds, % of sets right by size); asentmax_4096: ASEntmax, Vasylenko et al. (ICLR 2026), Table 8, the best published score at 4,096",
+  "clutrr": "dsr_lm and gpt3_zero_shot: DSR-LM, Zhang et al. 2023, Fig. 3 and Table 6 (trained on k = 2, 3, tested on 2 to 10); k10: NCRL, Cheng et al. 2023, Table 3 (trained on 2, 3, 4; accuracy at k = 10): rule learners R5 .98, NCRL .97, CTP-L .95, RLogic .94, a graph attention network .68; path_of_thoughts: Zhang et al., arXiv 2412.17963, Tables 1 and 2, CLUTRR column; popper: Chen and Ma, arXiv 2607.23019, Table 1, 8-10 relations"
+ },
+ "floydnet": {
+  "activity_selector": {
+   "full": 95.3,
+   "no_hints": 93.4
+  },
+  "articulation_points": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "bfs": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "bellman_ford": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "binary_search": {
+   "full": 94.47,
+   "no_hints": 94.47
+  },
+  "bridges": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "bubble_sort": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "dag_shortest_paths": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "dfs": {
+   "full": 100.0,
+   "no_hints": 75.1
+  },
+  "dijkstra": {
+   "full": 97.67,
+   "no_hints": 99.4
+  },
+  "find_maximum_subarray_kadane": {
+   "full": 86.2,
+   "no_hints": 80.57
+  },
+  "floyd_warshall": {
+   "full": 96.2,
+   "no_hints": 96.2
+  },
+  "graham_scan": {
+   "full": 99.63,
+   "no_hints": 99.63
+  },
+  "heapsort": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "insertion_sort": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "jarvis_march": {
+   "full": 99.5,
+   "no_hints": 99.5
+  },
+  "kmp_matcher": {
+   "full": 99.43,
+   "no_hints": 99.43
+  },
+  "lcs_length": {
+   "full": 95.7,
+   "no_hints": 86.1
+  },
+  "mst_kruskal": {
+   "full": 99.63,
+   "no_hints": 99.63
+  },
+  "mst_prim": {
+   "full": 99.67,
+   "no_hints": 99.65
+  },
+  "matrix_chain_order": {
+   "full": 91.5,
+   "no_hints": 85.15
+  },
+  "minimum": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "naive_string_matcher": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "optimal_bst": {
+   "full": 82.87,
+   "no_hints": 74.5
+  },
+  "quickselect": {
+   "full": 80.33,
+   "no_hints": 80.33
+  },
+  "quicksort": {
+   "full": 100.0,
+   "no_hints": 100.0
+  },
+  "strongly_connected_components": {
+   "full": 90.07,
+   "no_hints": 90.07
+  },
+  "segments_intersect": {
+   "full": 99.9,
+   "no_hints": 99.9
+  },
+  "task_scheduling": {
+   "full": 91.05,
+   "no_hints": 91.5
+  },
+  "topological_sort": {
+   "full": 100.0,
+   "no_hints": 99.75
+  }
+ },
+ "best_other": {
+  "activity_selector": {
+   "score": 99.03,
+   "model": "G-ForgetNet"
+  },
+  "articulation_points": {
+   "score": 97.97,
+   "model": "G-ForgetNet"
+  },
+  "bfs": {
+   "score": 100.0,
+   "model": "RANR"
+  },
+  "bellman_ford": {
+   "score": 99.18,
+   "model": "G-ForgetNet"
+  },
+  "binary_search": {
+   "score": 85.96,
+   "model": "G-ForgetNet"
+  },
+  "bridges": {
+   "score": 99.45,
+   "model": "FloydNet (small)"
+  },
+  "bubble_sort": {
+   "score": 95.78,
+   "model": "RANR"
+  },
+  "dag_shortest_paths": {
+   "score": 99.37,
+   "model": "G-ForgetNet"
+  },
+  "dfs": {
+   "score": 100.0,
+   "model": "Triplet-GMPNN, RANR"
+  },
+  "dijkstra": {
+   "score": 99.14,
+   "model": "G-ForgetNet"
+  },
+  "find_maximum_subarray_kadane": {
+   "score": 83.53,
+   "model": "RANR"
+  },
+  "floyd_warshall": {
+   "score": 81.4,
+   "model": "FloydNet (small)"
+  },
+  "graham_scan": {
+   "score": 97.67,
+   "model": "G-ForgetNet"
+  },
+  "heapsort": {
+   "score": 99.0,
+   "model": "FloydNet (small)"
+  },
+  "insertion_sort": {
+   "score": 98.4,
+   "model": "G-ForgetNet"
+  },
+  "jarvis_march": {
+   "score": 99.0,
+   "model": "FloydNet (small)"
+  },
+  "kmp_matcher": {
+   "score": 27.37,
+   "model": "FloydNet (small)"
+  },
+  "lcs_length": {
+   "score": 91.7,
+   "model": "FloydNet (small)"
+  },
+  "mst_kruskal": {
+   "score": 93.47,
+   "model": "FloydNet (small)"
+  },
+  "mst_prim": {
+   "score": 95.19,
+   "model": "G-ForgetNet"
+  },
+  "matrix_chain_order": {
+   "score": 91.89,
+   "model": "RT"
+  },
+  "minimum": {
+   "score": 99.26,
+   "model": "G-ForgetNet"
+  },
+  "naive_string_matcher": {
+   "score": 100.0,
+   "model": "FloydNet (small)"
+  },
+  "optimal_bst": {
+   "score": 83.58,
+   "model": "G-ForgetNet"
+  },
+  "quickselect": {
+   "score": 87.08,
+   "model": "RANR"
+  },
+  "quicksort": {
+   "score": 99.8,
+   "model": "FloydNet (small)"
+  },
+  "strongly_connected_components": {
+   "score": 89.27,
+   "model": "FloydNet (small)"
+  },
+  "segments_intersect": {
+   "score": 99.06,
+   "model": "G-ForgetNet"
+  },
+  "task_scheduling": {
+   "score": 88.08,
+   "model": "RANR"
+  },
+  "topological_sort": {
+   "score": 100.0,
+   "model": "FloydNet (small)"
+  }
+ },
+ "floydnet_params_millions_by_depth": {
+  "8": 20.2,
+  "16": 37.9,
+  "32": 73.3,
+  "64": 144.2,
+  "96": 215.0
+ },
+ "no_hint_baselines": {
+  "bevilacqua2023": {
+   "articulation_points": 81.97,
+   "bridges": 95.62,
+   "dfs": 33.94,
+   "strongly_connected_components": 57.63,
+   "topological_sort": 84.29,
+   "bellman_ford": 93.26,
+   "bfs": 99.89,
+   "dag_shortest_paths": 97.62,
+   "dijkstra": 95.01,
+   "floyd_warshall": 40.8,
+   "mst_kruskal": 92.28,
+   "mst_prim": 85.33,
+   "insertion_sort": 77.29,
+   "bubble_sort": 81.32,
+   "quicksort": 71.6,
+   "heapsort": 68.5,
+   "binary_search": 93.21,
+   "minimum": 99.24
+  },
+  "rodionov2023": {
+   "articulation_points": [
+    94.55,
+    null
+   ],
+   "bridges": [
+    98.91,
+    null
+   ],
+   "dfs": [
+    34.52,
+    null
+   ],
+   "strongly_connected_components": [
+    66.38,
+    null
+   ],
+   "topological_sort": [
+    94.58,
+    null
+   ],
+   "bellman_ford": [
+    95.25,
+    null
+   ],
+   "bfs": [
+    99.95,
+    null
+   ],
+   "dag_shortest_paths": [
+    98.18,
+    null
+   ],
+   "dijkstra": [
+    96.97,
+    null
+   ],
+   "floyd_warshall": [
+    42.16,
+    null
+   ],
+   "mst_kruskal": [
+    92.89,
+    93.15
+   ],
+   "mst_prim": [
+    85.7,
+    85.2
+   ],
+   "insertion_sort": [
+    90.67,
+    98.74
+   ],
+   "bubble_sort": [
+    90.67,
+    98.74
+   ],
+   "quicksort": [
+    90.67,
+    98.74
+   ],
+   "heapsort": [
+    90.67,
+    98.74
+   ],
+   "binary_search": [
+    85.29,
+    87.12
+   ],
+   "minimum": [
+    99.98,
+    99.99
+   ]
+  },
+  "mahdavi2023": {
+   "articulation_points": [
+    50.36,
+    47.85,
+    49.24
+   ],
+   "activity_selector": [
+    91.49,
+    64.59,
+    66.14
+   ],
+   "bellman_ford": [
+    90.14,
+    91.59,
+    78.12
+   ],
+   "bfs": [
+    99.53,
+    99.79,
+    99.14
+   ],
+   "binary_search": [
+    7.06,
+    29.13,
+    3.58
+   ],
+   "bridges": [
+    30.36,
+    32.9,
+    31.52
+   ],
+   "bubble_sort": [
+    50.13,
+    54.56,
+    57.28
+   ],
+   "dag_shortest_paths": [
+    97.23,
+    97.46,
+    80.6
+   ],
+   "dfs": [
+    15.27,
+    22.64,
+    11.13
+   ],
+   "dijkstra": [
+    93.51,
+    93.8,
+    83.27
+   ],
+   "find_maximum_subarray_kadane": [
+    21.65,
+    15.45,
+    14.88
+   ],
+   "floyd_warshall": [
+    39.47,
+    35.19,
+    14.78
+   ],
+   "graham_scan": [
+    96.27,
+    57.05,
+    57.62
+   ],
+   "heapsort": [
+    63.72,
+    55.18,
+    59.55
+   ],
+   "insertion_sort": [
+    38.41,
+    68.77,
+    40.93
+   ],
+   "jarvis_march": [
+    95.46,
+    56.64,
+    57.63
+   ],
+   "kmp_matcher": [
+    9.08,
+    2.18,
+    2.28
+   ],
+   "lcs_length": [
+    56.93,
+    60.27,
+    59.7
+   ],
+   "matrix_chain_order": [
+    78.13,
+    82.01,
+    75.13
+   ],
+   "minimum": [
+    99.53,
+    98.01,
+    93.52
+   ],
+   "mst_kruskal": [
+    73.22,
+    71.25,
+    71.57
+   ],
+   "mst_prim": [
+    74.63,
+    73.16,
+    45.46
+   ],
+   "naive_string_matcher": [
+    4.43,
+    1.94,
+    1.3
+   ],
+   "optimal_bst": [
+    56.02,
+    30.25,
+    30.42
+   ],
+   "quickselect": [
+    8.5,
+    9.1,
+    8.69
+   ],
+   "quicksort": [
+    58.3,
+    63.87,
+    59.29
+   ],
+   "segments_intersect": [
+    93.94,
+    77.67,
+    76.16
+   ],
+   "strongly_connected_components": [
+    53.65,
+    57.65,
+    39.86
+   ],
+   "task_scheduling": [
+    82.86,
+    81.88,
+    81.93
+   ],
+   "topological_sort": [
+    72.03,
+    78.76,
+    35.3
+   ]
+  },
+  "georgiev2024": {
+   "bellman_ford": [
+    97.06,
+    97.23,
+    95.39,
+    96.78,
+    94.23
+   ],
+   "floyd_warshall": [
+    52.53,
+    61.86,
+    49.3,
+    55.75,
+    53.2
+   ],
+   "dag_shortest_paths": [
+    94.21,
+    93.32,
+    88.3,
+    89.81,
+    89.49
+   ],
+   "mst_prim": [
+    93.56,
+    92.01,
+    87.69,
+    88.67,
+    86.37
+   ],
+   "bfs": [
+    99.85,
+    99.69,
+    99.51,
+    98.73,
+    98.28
+   ],
+   "dfs": [
+    16.89,
+    31.2,
+    29.07,
+    40.62,
+    23.87
+   ],
+   "strongly_connected_components": [
+    40.7,
+    46.84,
+    39.33,
+    43.63,
+    38.71
+   ],
+   "binary_search": [
+    94.67,
+    93.33,
+    84.33,
+    59.0,
+    null
+   ],
+   "minimum": [
+    97.67,
+    96.67,
+    94.0,
+    97.22,
+    null
+   ],
+   "insertion_sort": [
+    27.07,
+    63.67,
+    33.8,
+    86.93,
+    null
+   ]
+  },
+  "dear_triplet": {
+   "floyd_warshall": 62.29,
+   "dfs": 42.73,
+   "strongly_connected_components": 45.12,
+   "binary_search": 87.0,
+   "insertion_sort": 82.34
+  },
+  "dear_parallel": {
+   "binary_search": [
+    95.67,
+    93.33,
+    93.33,
+    85.67
+   ]
+  },
+  "dnar2025": {
+   "bfs": 79.0
+  }
+ },
+ "max_retrieval": {
+  "softmax_table1": {
+   "16": 98.6,
+   "32": 97.1,
+   "64": 94.3,
+   "128": 89.7,
+   "256": 81.3,
+   "512": 70.1,
+   "1024": 53.8,
+   "2048": 35.7,
+   "4096": 22.6,
+   "8192": 15.7,
+   "16384": 12.4
+  },
+  "asentmax_4096": 62.7
+ },
+ "clutrr": {
+  "dsr_lm": 60.98,
+  "gpt3_zero_shot": 28.6,
+  "k10": {
+   "R5": 0.98,
+   "NCRL": 0.97,
+   "CTP_L": 0.95,
+   "RLogic": 0.94,
+   "GAT": 0.68
+  },
+  "path_of_thoughts": {
+   "gpt4o_cot": 57.6,
+   "gpt4o_symbolic": 67.7,
+   "gpt5_zero_shot": 73.2,
+   "llama3_70b_pot_llm": 56.3,
+   "gpt4o_pot_llm": 61.9
+  },
+  "popper": {
+   "qwen3_5_4b": 61.93,
+   "gpt5_4": 75.09
+  }
+ }
+}

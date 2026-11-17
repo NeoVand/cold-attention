@@ -1,0 +1,20 @@
+[project]
+name = "witness-clrs"
+version = "0.1.0"
+description = "A looped pair block that counts and compares witnesses, trained on CLRS-30"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = ["jax>=0.8.0", "optax>=0.2.6", "numpy>=2.0", "safetensors>=0.5"]
+
+[project.optional-dependencies]
+hub = ["huggingface_hub>=0.30"]
+data = ["dm-clrs==2.0.3"]
+modal = ["modal"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["witness_clrs"]

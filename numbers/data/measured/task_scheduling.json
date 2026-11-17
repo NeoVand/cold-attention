@@ -1,0 +1,8 @@
+{
+ "about": "Task scheduling: the general block with deadlines in units of n and positions as given in training.",
+ "values": {
+  "ts.ruler.hi": "99.42",
+  "ts.ruler.lo": "99.34",
+  "ts.ruler.mean": "99.38"
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "name": "shared-units-dfs",
+ "tasks": [
+  "bfs",
+  "bellman_ford",
+  "dijkstra",
+  "dag_shortest_paths",
+  "mst_prim",
+  "floyd_warshall",
+  "topological_sort",
+  "dfs",
+  "strongly_connected_components",
+  "articulation_points",
+  "bridges",
+  "mst_kruskal",
+  "insertion_sort",
+  "bubble_sort",
+  "heapsort",
+  "quicksort",
+  "minimum",
+  "quickselect",
+  "binary_search",
+  "find_maximum_subarray_kadane",
+  "matrix_chain_order",
+  "optimal_bst",
+  "lcs_length",
+  "activity_selector",
+  "task_scheduling",
+  "naive_string_matcher",
+  "kmp_matcher",
+  "segments_intersect",
+  "graham_scan",
+  "jarvis_march"
+ ],
+ "model": {
+  "block": "census",
+  "width": 128,
+  "mlp": 312,
+  "edge_mlp": 32
+ },
+ "task_model": {
+  "bellman_ford": {
+   "weight_scale": "graph"
+  },
+  "dijkstra": {
+   "weight_scale": "graph"
+  },
+  "dag_shortest_paths": {
+   "weight_scale": "graph"
+  },
+  "mst_prim": {
+   "weight_scale": "graph"
+  },
+  "mst_kruskal": {
+   "weight_scale": "graph"
+  },
+  "task_scheduling": {
+   "scale_by_n": [
+    "d"
+   ]
+  },
+  "dfs": {
+   "read": {
+    "rule": "n",
+    "compile": "per_loop"
+   }
+  }
+ },
+ "task_sizes": {
+  "naive_string_matcher": [
+   20
+  ],
+  "kmp_matcher": [
+   20
+  ]
+ },
+ "train": {
+  "updates": 160000,
+  "batch": 32,
+  "lr": 0.001,
+  "warmup": 2000,
+  "final_lr_frac": 0.01,
+  "weight_decay": 0.01,
+  "loops": [
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "sizes": [
+   4,
+   7,
+   11,
+   13,
+   16
+  ],
+  "eval_loops": 16,
+  "eval_batch": 16,
+  "check_every": 500,
+  "extra_splits": [],
+  "task_loops": {
+   "dfs": [
+    8,
+    32
+   ]
+  },
+  "weight_averaging": {
+   "from": 0.5,
+   "every": 1000
+  }
+ }
+}

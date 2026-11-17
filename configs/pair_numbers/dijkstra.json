@@ -1,0 +1,42 @@
+{
+ "task": "dijkstra",
+ "model": {
+  "block": "pair_numbers",
+  "width": 128,
+  "mlp": 312,
+  "edge_mlp": 32,
+  "arithmetic": "plus"
+ },
+ "train": {
+  "steps": 20000,
+  "batch": 32,
+  "lr": 0.001,
+  "warmup": 2000,
+  "final_lr_frac": 0.01,
+  "weight_decay": 0.01,
+  "loops": [
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "sizes": [
+   4,
+   7,
+   11,
+   13,
+   16
+  ],
+  "check_every": 250,
+  "eval_loops": 16,
+  "eval_batch": 16,
+  "stop": {
+   "rule": "validation fit",
+   "every": 250,
+   "patience": 4,
+   "loops_from": 8,
+   "loops_to": 16
+  }
+ }
+}

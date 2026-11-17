@@ -1,0 +1,21 @@
+{
+ "about": "Item memory: the bilinear read-out arm, the number of runs and their cost.",
+ "values": {
+  "item.bilin.bfs": "97.51",
+  "item.bilin.bubble-sort": "28.17",
+  "item.bilin.heapsort": "29.59",
+  "item.bilin.insertion-sort": "29.30",
+  "item.bilin.plain.bfs": "97.51",
+  "item.bilin.plain.bubble-sort": "29.00",
+  "item.bilin.plain.heapsort": "29.93",
+  "item.bilin.plain.insertion-sort": "29.93",
+  "item.bilin.plain.quicksort": "30.52",
+  "item.bilin.plain.sorts.max": "30.52",
+  "item.bilin.plain.sorts.mean": "29.85",
+  "item.bilin.quicksort": "30.08",
+  "item.bilin.sorts.max": "30.08",
+  "item.bilin.sorts.mean": "29.28",
+  "item.cost": "8.90",
+  "item.runs": "35"
+ }
+}

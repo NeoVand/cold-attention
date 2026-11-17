@@ -1,0 +1,14 @@
+{
+ "about": "The block: milliseconds per loop and an example of its arithmetic.",
+ "values": {
+  "archex.count1": "2",
+  "archex.count2": "1",
+  "archex.strength": "0.7",
+  "block.dfsn.ms64": "609",
+  "block.ms16": "9",
+  "block.ms64": "90",
+  "block.ms64.hi": "95",
+  "block.ms64.lo": "79",
+  "block.width": "128"
+ }
+}

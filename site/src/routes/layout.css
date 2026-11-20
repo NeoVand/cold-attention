@@ -37,6 +37,13 @@
 	--hover: 200ms;
 }
 
+/* No scroll anchoring. The demo changes height while models load and loops arrive; WebKit's anchoring (Safari and
+ * Chrome on iOS) shifted the page each time, and a shift during the bounce at the top left the header above reach. */
+html,
+body {
+	overflow-anchor: none;
+}
+
 html,
 body {
 	background: var(--color-paper);

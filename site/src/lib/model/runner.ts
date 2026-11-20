@@ -1,6 +1,10 @@
 /** One async interface over the two engines: engine.ts (CPU, the parity reference) and gpu.ts (WebGPU). */
 import { Engine, type Block, type Inputs, type Kind, type ModelConfig, type Params, type State } from './engine';
 import { CENSUS_LOOPS, censusLoops, restCap } from './run';
+// Imported statically: as a lazy chunk, gpu.ts imported shared code back from the worker's entry file, and WebKit
+// (Safari and Chrome on iOS) answered that import with a second copy of the worker, whose empty handler then took
+// every message. The GPU run never started there.
+import { GpuEngine, gpuAvailable } from './gpu';
 
 export type Readout = Record<string, { kind: Kind; pred: Int32Array; logits: Float32Array }>;
 
@@ -35,7 +39,6 @@ export function cpuRunner(p: Params, config: ModelConfig): Runner {
 export async function makeRunner(p: Params, config: ModelConfig, want: 'gpu' | 'cpu'): Promise<Runner> {
 	if (want === 'gpu') {
 		try {
-			const { gpuAvailable, GpuEngine } = await import('./gpu');
 			const dev = await gpuAvailable();
 			if (dev) {
 				const g = new GpuEngine(dev, p, config);
